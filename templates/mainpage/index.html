@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./logo/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./logo/favicon.ico">
+    <link rel="shortcut icon" href="./static/mainpage/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./static/mainpage/logo/favicon.ico">
     <meta name="robots" content="index, follow">
     <meta name="description"
         content="PriceStalk is a website which uses gives the best deals for the products you want">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="./static/mainpage/css/style.css">
     <title>PriceStalk</title>
 </head>
 
 <body>
-    <script src="./js/app.js"></script>
+    <script src="./static/mainpage/js/app.js"></script>
     <div id="home">
         <header class="head-main">
             <nav class="nav-bar">
@@ -28,15 +29,21 @@
                             <h2>About Us</h2>
                         </a></li>
                 </ul>
-            </nav>
+            </nav>{%if form%}
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Hello User, The price has dropped to {{budget}}==><a href="{{URL}}">Click here</a>
+              </div>
+              {%endif%}
         </header>
         <section class="main-back">
+            
             <h1 class="intro-text">Great Products</br>Missed Deals</h1>
             <button class="shop-button" id="clickon" onclick="jadoo()">Shop Now</button>
-            <form id="form" class="form">
-                <input type="url" placeholder="Enter Amazon URL" class="URL formele">
-                <input type="number" placeholder="Enter Budget" class="Budget formele">
-                <input type="E-mail" placeholder="E-mail" class="mail formele">
+            <form id="form" class="form" method="POST">{% csrf_token %}
+                <input type="url" placeholder="Enter Amazon URL" class="URL formele"name="URL2">
+                <input type="number" placeholder="Enter Budget" class="Budget formele"name="budget2">
+                <input type="E-mail" placeholder="E-mail" class="mail formele"name="email2">
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -62,12 +69,12 @@
             </div>
             <div class="img-gallery">
                 <div class="aamche-photo">
-                    <div class="mandar"><img src="./img/mandar.jpeg" alt="">
+                    <div class="mandar"><img src="./static/mainpage/img/mandar.jpeg" alt="">
                         <h2>Mandar Bakshi</h2>
                         <h3>Co-Founder</h3>
                     </div>
                     
-                    <div class="prathamesh"><img src="./img/prathamesh.jpeg" alt="">
+                    <div class="prathamesh"><img src="./static/mainpage/img/prathamesh.jpeg" alt="">
                         <h2>Prathamesh Gautame</h2>
                         <h3>Co-Founder</h3>
                     </div>

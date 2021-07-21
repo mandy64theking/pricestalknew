@@ -11,7 +11,7 @@ headers = {
 }
 
 
-def check_price(URL,budget,toemail):
+def check_price_flip(URL,budget,toemail):
     page = requests.get(URL, headers=headers)
 
     soup = BeautifulSoup(page.content, 'html.parser')

@@ -5,14 +5,18 @@
 }
 html {
   font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
+
 h1 {
   font-size: 2.4rem;
 }
+
 header {
   background-color: rgb(44, 49, 49);
+  display: flex;
+  flex-direction: column;
 }
 nav {
   display: flex;
@@ -23,12 +27,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
-a {
+nav a {
   text-decoration: none;
   color: antiquewhite;
   transition: ease-in-out 0.5s;
 }
-a:hover {
+nav a:hover {
   background-color: antiquewhite;
   color: black;
 }
@@ -41,6 +45,22 @@ nav ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
+}
+header .alert {
+  background-color: yellowgreen;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-size: 1.6rem;
+}
+header .alert a {
+  text-decoration: none;
+  color: antiquewhite;
+  transition: ease-in-out 0.5s;
+}
+header .alert a:hover {
+  background-color: yellowgreen;
+  color: black;
 }
 .main-back {
   display: flex;
@@ -145,4 +165,21 @@ footer h2 {
   align-items: center;
   text-align: center;
   color: antiquewhite;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 2rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
