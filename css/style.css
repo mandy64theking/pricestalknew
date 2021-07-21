@@ -45,7 +45,7 @@ nav ul {
 .main-back {
   display: flex;
   min-height: 90vh;
-  background-image: url(/PriceStalk/frontend/img/onlineshop.jpg);
+  background-image: url(../img/onlineshop.jpg);
   background-position: center;
   background-size: cover;
   justify-content: center;
