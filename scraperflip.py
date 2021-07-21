@@ -26,6 +26,7 @@ def check_price(URL,budget,toemail):
         send_mail(toemail,URL)
     print(converted_price)
     print(title)
+    return converted_price
 
 
 def send_mail(toemail,URL):
