@@ -125,6 +125,5 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
-# Pyre type checker
-.pyre/
-pricestalknew/settings.py
+# Pyre type check
+settings.py
