@@ -40,7 +40,7 @@ def send_mail(toemail, URL):
 
     server.login('scraperamazonflipkart@gmail.com', 'hdbuscxtxxsqyuvh')
     subject = 'Price fell down! DO NOT REPLY.This is a system-generated mail'
-    body = 'Check the Link' + URL
+    body = 'Check the Link ' + URL
 
     msg = f"Subject : {subject}\n\n{body}"
 

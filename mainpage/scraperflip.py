@@ -36,8 +36,8 @@ def send_mail(toemail,URL):
     server.ehlo()
 
     server.login('scraperamazonflipkart@gmail.com', 'hdbuscxtxxsqyuvh')
-    subject = 'Price fell down! DO NOT REPLY.This is a System-genrated mail'
-    body = 'Check the Flipkart Link' + URL
+    subject = 'Price fell down! DO NOT REPLY.This is a System-generated mail'
+    body = 'Check the Flipkart Link ' + URL
 
     msg = f"Subject : {subject}\n\n{body}"
 
