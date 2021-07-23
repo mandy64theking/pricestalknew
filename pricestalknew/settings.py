@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7jymagg-^k#dr@lzap7m=fg%r8q+p#8xopc0hyd&@*6+g%awzl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://pricestalk-django.herokuapp.com/']
 
 
 # Application definition
@@ -122,7 +123,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, ‘static’)
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Activate Django-Heroku.
+django_heroku.settings(locals())
