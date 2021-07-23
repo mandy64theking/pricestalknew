@@ -21,7 +21,8 @@ def check_price_flip(URL,budget,toemail):
 
     new_price = price[1:]
     array_price = new_price.split(',')
-    converted_price = float(array_price[0] + array_price[1])
+    converted_price = float((price[1:]).replace(",", ""))
+   # converted_price = float(array_price[0] + array_price[1]+array_price[2])
     if (converted_price < budget):
         send_mail(toemail,URL)
     print(converted_price)
