@@ -97,14 +97,19 @@ button:hover {
 }
 #form {
   display: none;
+  width: 50%;
 }
 .formele {
   border-radius: 5px;
+  flex: 1;
+}
+.URL {
+  flex: 2;
 }
 #about {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(lightgrey, transparent);
+  background: white;
 }
 .about-back {
   height: 90vh;
@@ -120,6 +125,7 @@ button:hover {
 .about-text {
   padding-left: 1rem;
   padding-right: 1rem;
+  text-align: justify;
 }
 p {
   font-size: 1.6rem;
@@ -152,6 +158,8 @@ p {
 .aamche-photo img {
   height: 200px;
   padding: 0.5rem;
+  border-radius: 50%;
+  aspect-ratio: 14/16;
 }
 footer {
   height: 10vh;
