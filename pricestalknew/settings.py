@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7jymagg-^k#dr@lzap7m=fg%r8q+p#8xopc0hyd&@*6+g%awzl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://pricestalk-django.herokuapp.com/']
+ALLOWED_HOSTS = ['https://pricestalknew.herokuapp.com/']
 
 
 # Application definition
