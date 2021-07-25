@@ -5,14 +5,18 @@
 }
 html {
   font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
+
 h1 {
   font-size: 2.4rem;
 }
+
 header {
-  background-color: rgb(44, 49, 49);
+  background: rgb(44, 49, 49);
+  display: flex;
+  flex-direction: column;
 }
 nav {
   display: flex;
@@ -23,12 +27,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
-a {
+nav a {
   text-decoration: none;
   color: antiquewhite;
   transition: ease-in-out 0.5s;
 }
-a:hover {
+nav a:hover {
   background-color: antiquewhite;
   color: black;
 }
@@ -41,6 +45,25 @@ nav ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
+}
+.menu {
+  display: none;
+}
+header .alert {
+  background-color: yellowgreen;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-size: 1.6rem;
+}
+header .alert a {
+  text-decoration: none;
+  color: antiquewhite;
+  transition: ease-in-out 0.5s;
+}
+header .alert a:hover {
+  background-color: yellowgreen;
+  color: black;
 }
 .main-back {
   display: flex;
@@ -77,20 +100,46 @@ button:hover {
 }
 #form {
   display: none;
+  width: 50%;
 }
 .formele {
   border-radius: 5px;
+  flex: 1;
+}
+.URL {
+  flex: 2;
 }
 #about {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(lightgrey, transparent);
+  background: white;
 }
 .about-back {
   height: 90vh;
   display: flex;
   width: 90%;
   margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .about-back {
+    flex-direction: column;
+  }
+  form {
+    flex-direction: column;
+  }
+  form button {
+    width: 100px;
+    margin: auto;
+  }
+  .formele {
+    justify-content: space-around;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav ul li {
+    padding: 1rem;
+  }
 }
 .about-us {
   flex: 1;
@@ -100,6 +149,8 @@ button:hover {
 .about-text {
   padding-left: 1rem;
   padding-right: 1rem;
+  text-align: justify;
+  min-width: 400px;
 }
 p {
   font-size: 1.6rem;
@@ -132,6 +183,8 @@ p {
 .aamche-photo img {
   height: 200px;
   padding: 0.5rem;
+  border-radius: 50%;
+  aspect-ratio: 14/16;
 }
 footer {
   height: 10vh;
@@ -145,4 +198,21 @@ footer h2 {
   align-items: center;
   text-align: center;
   color: antiquewhite;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 2rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }

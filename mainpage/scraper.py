@@ -24,7 +24,7 @@ def check_price(URL, budget, toemail):
     except:
         price = soup.find("span", {"id": "priceblock_ourprice"}).get_text()
     # TODO Fix issues with deal price/our price
-    converted_price = float((price[2:]).replace(",", ""))
+    converted_price = float((price[1:]).replace(",", ""))
     if (converted_price < budget):
         send_mail(toemail, URL)
     print(converted_price)
@@ -39,8 +39,8 @@ def send_mail(toemail, URL):
     server.ehlo()
 
     server.login('scraperamazonflipkart@gmail.com', 'hdbuscxtxxsqyuvh')
-    subject = 'Price fell down! DO NOT REPLY.This is a System-genrated mail'
-    body = 'Check the amazon Link' + URL
+    subject = 'Price fell down! DO NOT REPLY.This is a system-generated mail'
+    body = 'Check the Link ' + URL
 
     msg = f"Subject : {subject}\n\n{body}"
 
